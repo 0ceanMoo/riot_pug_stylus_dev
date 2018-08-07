@@ -102,7 +102,9 @@ app
 ```
 
 ### Babel
+```
 yarn add -D babel-core babel-loader babel-preset-env babel-preset-es2015-riot
+```
 
 ```
 vi .babelrc
