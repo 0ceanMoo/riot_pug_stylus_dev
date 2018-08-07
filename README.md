@@ -73,6 +73,34 @@ import app from "./tags/app.tag"
 riot.mount("*")
 ```
 
+```
+vi assets/js/tags/app.js
+app-header
+  h1 header
+  style(type="stylus").
+    h1
+      background red
+      color white
+app-content
+  p Hello {opts.title}
+  button(onclick="{hello}") Click me
+  script.
+    hello() {
+      const msg = `Hello ${opts.title}`
+      alert(msg)
+    }
+app-footer
+  small footer
+  style(type="stylus").
+    small
+      display block
+      text-align center
+app
+  app-header
+  app-content(title="{opts.title}")
+  app-footer
+```
+
 ### Babel
 yarn add -D babel-core babel-loader babel-preset-env babel-preset-es2015-riot
 
